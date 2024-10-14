@@ -1,0 +1,180 @@
+[21:35:31][PluginLoader][WARNING] Plugins directory not found.
+[21:35:31][ProcessManager][WARNING] Failed to read PIDs: pid-list.txt (Systém nemůže nalézt uvedený soubor)
+[21:35:31][NATTCore][INFO] NATT CORE initialization done
+Version: 1.7.0 
+Configuration path: https://gitlab.com/ap5vs/test-config/telnet-server-config/-/raw/main/test-config-3.yaml?ref_type=heads
+Configuration loading mode: FROM URL
+[21:35:31][NATTCore][INFO] Working directory path: C:\Users\ash31\OneDrive\Dokumenty\GitHub\telnet-server-main
+[21:35:31][NATTCore][INFO] Start loading of the configuration file ...
+[21:35:32][NetworkIO][INFO] Yaml data has been loaded from network location (https://gitlab.com/ap5vs/test-config/telnet-server-config/-/raw/main/test-config-3.yaml?ref_type=heads)
+[21:35:32][NATTCore][INFO] Configuration loading done
+[21:35:32][NATTCore][INFO] Start building test structure according to the configuration ...
+[21:35:32][NATTCore][INFO] Test structure ...
+[21:35:32][NATTCore][INFO] Test structure building done
+[21:35:32][NATTCore][INFO] Start test executing ...
+[21:35:32][TestReportGenerator][INFO] Extenet reports generated. Final report will be saved to file: test_report.html
+[21:35:32][NATTCore][INFO] Starts execution on the root keyword  ...
+[21:35:32][MessageBuffer][INFO] Message buffer created for module with name: default
+[21:35:32][ExternalProgramRunner][INFO] (default) Run external app with command: java -jar app/build/libs/app.jar 9999 5
+[21:35:32][ProcessManager][INFO] New PID (29284) added to file
+[21:35:32][WaitKw][INFO] Waiting: 800 ms
+[21:35:33][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'Server is listening on port 9999'
+[21:35:33][MessageBuffer][INFO] Message buffer created for module with name: client-1
+[21:35:33][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'New client connected'
+[21:35:33][TelnetClient][INFO] (client-1) Telnet client connected to host with the address: 'localhost' on port '9999'
+[21:35:33][WaitKw][INFO] Waiting: 600 ms
+[21:35:34][TestSuiteKw][INFO] Test case 'Test komunikace jednoho klienta 1' starts executing now
+[21:35:34][TelnetClient][INFO] (client-1) Message send: This is a test message
+[21:35:34][WaitKw][INFO] Waiting: 900 ms
+[21:35:34][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'Received: This is a test message'
+[21:35:34][MessageBuffer][INFO] Message added to buffer [ Mod: client-1 | Tag:  ] Content: 'This is a test message'
+[21:35:35][NATTContext][INFO] Data has been stored in to the variable 'var-1'. Data value: This is a test message
+[21:35:35][TestSuiteKw][INFO] Test suite 'Testování serveru s jedním klientem' - Test case 'Test komunikace jednoho klienta 1' passed
+[21:35:35][MessageBuffer][INFO] Message buffer cleared
+[21:35:35][TestSuiteKw][INFO] Test case 'Test komunikace jednoho klienta 2' starts executing now
+[21:35:35][TelnetClient][INFO] (client-1) Message send: Testing message 123
+[21:35:35][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'Received: Testing message 123'
+[21:35:35][MessageBuffer][INFO] Message added to buffer [ Mod: client-1 | Tag:  ] Content: 'Testing message 123'
+[21:35:35][WaitKw][INFO] Waiting: 600 ms
+[21:35:36][TelnetClient][INFO] (client-1) Message send: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+[21:35:36][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'Received: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+[21:35:36][MessageBuffer][INFO] Message added to buffer [ Mod: client-1 | Tag:  ] Content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+[21:35:36][WaitKw][INFO] Waiting: 900 ms
+[21:35:37][NATTContext][INFO] Data has been stored in to the variable 'var-1'. Data value: Testing message 123
+[21:35:37][NATTContext][INFO] Data has been stored in to the variable 'var-2'. Data value: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+[21:35:37][TestSuiteKw][INFO] Test suite 'Testování serveru s jedním klientem' - Test case 'Test komunikace jednoho klienta 2' passed
+[21:35:37][MessageBuffer][INFO] Message buffer cleared
+[21:35:38][MessageBuffer][INFO] Message buffer cleared
+[21:35:38][TelnetClient][INFO] (client-1) Telnet client [client-1] terminated
+[21:35:38][TelnetClient][WARNING] (client-1) Connection closed
+[21:35:38][TelnetClient][INFO] (client-1) Telnet client connected to host with the address: 'localhost' on port '9999'
+[21:35:38][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'New client connected'
+[21:35:38][MessageBuffer][INFO] Message buffer created for module with name: client-2
+[21:35:38][TelnetClient][INFO] (client-2) Telnet client connected to host with the address: 'localhost' on port '9999'
+[21:35:38][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'New client connected'
+[21:35:38][MessageBuffer][INFO] Message buffer created for module with name: client-3
+[21:35:38][TelnetClient][INFO] (client-3) Telnet client connected to host with the address: 'localhost' on port '9999'
+[21:35:38][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'New client connected'
+[21:35:38][WaitKw][INFO] Waiting: 800 ms
+[21:35:39][TestSuiteKw][INFO] Test case 'Test komunikace více klientů 1' starts executing now
+[21:35:39][TelnetClient][INFO] (client-1) Message send: This is testing message 987654321
+[21:35:39][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'Received: This is testing message 987654321'
+[21:35:39][MessageBuffer][INFO] Message added to buffer [ Mod: client-1 | Tag:  ] Content: 'This is testing message 987654321'
+[21:35:39][TelnetClient][INFO] (client-2) Message send: This is testing message from client #2
+[21:35:39][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'Received: This is testing message from client #2'
+[21:35:39][MessageBuffer][INFO] Message added to buffer [ Mod: client-2 | Tag:  ] Content: 'This is testing message from client #2'
+[21:35:39][TelnetClient][INFO] (client-3) Message send: Next testing message from client 3!!
+[21:35:39][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'Received: Next testing message from client 3!!'
+[21:35:39][MessageBuffer][INFO] Message added to buffer [ Mod: client-3 | Tag:  ] Content: 'Next testing message from client 3!!'
+[21:35:39][WaitKw][INFO] Waiting: 900 ms
+[21:35:40][NATTContext][INFO] Data has been stored in to the variable 'var-1'. Data value: This is testing message 987654321
+[21:35:40][NATTContext][INFO] Data has been stored in to the variable 'var-2'. Data value: This is testing message from client #2
+[21:35:40][NATTContext][INFO] Data has been stored in to the variable 'var-3'. Data value: Next testing message from client 3!!
+[21:35:40][TestSuiteKw][INFO] Test suite 'Testování serveru s více klienty' - Test case 'Test komunikace více klientů 1' passed
+[21:35:40][MessageBuffer][INFO] Message buffer cleared
+[21:35:40][TestSuiteKw][INFO] Test case 'Test komunikace více klientů 2' starts executing now
+[21:35:40][TelnetClient][INFO] (client-1) Message send: This is testing message 1
+[21:35:40][MessageBuffer][INFO] Message added to buffer [ Mod: client-1 | Tag:  ] Content: 'This is testing message 1'
+[21:35:40][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'Received: This is testing message 1'
+[21:35:40][TelnetClient][INFO] (client-1) Message send: This is testing message 2
+[21:35:40][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'Received: This is testing message 2'
+[21:35:40][MessageBuffer][INFO] Message added to buffer [ Mod: client-1 | Tag:  ] Content: 'This is testing message 2'
+[21:35:40][TelnetClient][INFO] (client-1) Message send: This is testing message 3
+[21:35:40][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'Received: This is testing message 3'
+[21:35:40][MessageBuffer][INFO] Message added to buffer [ Mod: client-1 | Tag:  ] Content: 'This is testing message 3'
+[21:35:40][TelnetClient][INFO] (client-2) Message send: This is testing message 1
+[21:35:40][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'Received: This is testing message 1'
+[21:35:40][MessageBuffer][INFO] Message added to buffer [ Mod: client-2 | Tag:  ] Content: 'This is testing message 1'
+[21:35:40][TelnetClient][INFO] (client-2) Message send: This is testing message 2
+[21:35:40][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'Received: This is testing message 2'
+[21:35:40][MessageBuffer][INFO] Message added to buffer [ Mod: client-2 | Tag:  ] Content: 'This is testing message 2'
+[21:35:40][TelnetClient][INFO] (client-2) Message send: This is testing message 3
+[21:35:40][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'Received: This is testing message 3'
+[21:35:40][MessageBuffer][INFO] Message added to buffer [ Mod: client-2 | Tag:  ] Content: 'This is testing message 3'
+[21:35:40][TelnetClient][INFO] (client-2) Message send: This is testing message 4
+[21:35:40][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'Received: This is testing message 4'
+[21:35:40][MessageBuffer][INFO] Message added to buffer [ Mod: client-2 | Tag:  ] Content: 'This is testing message 4'
+[21:35:40][TelnetClient][INFO] (client-3) Message send: This is testing message 1
+[21:35:40][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'Received: This is testing message 1'
+[21:35:40][MessageBuffer][INFO] Message added to buffer [ Mod: client-3 | Tag:  ] Content: 'This is testing message 1'
+[21:35:40][TelnetClient][INFO] (client-3) Message send: This is testing message 2
+[21:35:40][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'Received: This is testing message 2'
+[21:35:40][MessageBuffer][INFO] Message added to buffer [ Mod: client-3 | Tag:  ] Content: 'This is testing message 2'
+[21:35:40][WaitKw][INFO] Waiting: 1400 ms
+[21:35:42][NATTContext][INFO] Data has been stored in to the variable 'var-1'. Data value: 3
+[21:35:42][NATTContext][INFO] Data has been stored in to the variable 'var-2'. Data value: 4
+[21:35:42][NATTContext][INFO] Data has been stored in to the variable 'var-3'. Data value: 2
+[21:35:42][TestSuiteKw][INFO] Test suite 'Testování serveru s více klienty' - Test case 'Test komunikace více klientů 2' passed
+[21:35:42][MessageBuffer][INFO] Message buffer cleared
+[21:35:42][MessageBuffer][INFO] Message buffer cleared
+[21:35:42][TelnetClient][WARNING] (client-1) Connection closed
+[21:35:42][TelnetClient][INFO] (client-1) Telnet client [client-1] terminated
+[21:35:42][TelnetClient][WARNING] (client-2) Connection closed
+[21:35:42][TelnetClient][INFO] (client-2) Telnet client [client-2] terminated
+[21:35:42][TelnetClient][WARNING] (client-3) Connection closed
+[21:35:42][TelnetClient][INFO] (client-3) Telnet client [client-3] terminated
+[21:35:42][TelnetClient][INFO] (client-1) Telnet client connected to host with the address: 'localhost' on port '9999'
+[21:35:42][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'New client connected'
+[21:35:42][WaitKw][INFO] Waiting: 500 ms
+[21:35:43][TelnetClient][INFO] (client-2) Telnet client connected to host with the address: 'localhost' on port '9999'
+[21:35:43][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'New client connected'
+[21:35:43][WaitKw][INFO] Waiting: 500 ms
+[21:35:43][TelnetClient][INFO] (client-3) Telnet client connected to host with the address: 'localhost' on port '9999'
+[21:35:43][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'New client connected'
+[21:35:43][WaitKw][INFO] Waiting: 500 ms
+[21:35:44][MessageBuffer][INFO] Message buffer created for module with name: client-4
+[21:35:44][TelnetClient][INFO] (client-4) Telnet client connected to host with the address: 'localhost' on port '9999'
+[21:35:44][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'New client connected'
+[21:35:44][WaitKw][INFO] Waiting: 500 ms
+[21:35:44][MessageBuffer][INFO] Message buffer created for module with name: client-5
+[21:35:44][TelnetClient][INFO] (client-5) Telnet client connected to host with the address: 'localhost' on port '9999'
+[21:35:44][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'New client connected'
+[21:35:44][WaitKw][INFO] Waiting: 500 ms
+[21:35:45][MessageBuffer][INFO] Message buffer created for module with name: client-6
+[21:35:45][TelnetClient][INFO] (client-6) Telnet client connected to host with the address: 'localhost' on port '9999'
+[21:35:45][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'New client connected'
+[21:35:45][WaitKw][INFO] Waiting: 500 ms
+[21:35:45][TestSuiteKw][INFO] Test case 'Testování omezení počtu klientů 1' starts executing now
+[21:35:45][TelnetClient][INFO] (client-5) Message send: This is testing message 1
+[21:35:45][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'Received: This is testing message 1'
+[21:35:45][MessageBuffer][INFO] Message added to buffer [ Mod: client-5 | Tag:  ] Content: 'This is testing message 1'
+[21:35:45][TelnetClient][INFO] (client-6) Message send: This is testing message 1
+[21:35:45][TelnetClient][INFO] (client-5) Message send: This is testing message 2
+[21:35:45][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'Received: This is testing message 2'
+[21:35:45][MessageBuffer][INFO] Message added to buffer [ Mod: client-5 | Tag:  ] Content: 'This is testing message 2'
+[21:35:45][TelnetClient][INFO] (client-6) Message send: This is testing message 2
+[21:35:45][WaitKw][INFO] Waiting: 1200 ms
+[21:35:47][NATTContext][INFO] Data has been stored in to the variable 'var-1'. Data value: 2
+[21:35:47][NATTContext][INFO] Data has been stored in to the variable 'var-2'. Data value: 0
+[21:35:47][TestSuiteKw][INFO] Test suite 'Testování omezení počtu připojení k serveru' - Test case 'Testování omezení počtu klientů 1' passed
+[21:35:47][MessageBuffer][INFO] Message buffer cleared
+[21:35:48][MessageBuffer][INFO] Message buffer cleared
+[21:35:48][TelnetClient][WARNING] (client-1) Connection closed
+[21:35:48][TelnetClient][INFO] (client-1) Telnet client [client-1] terminated
+[21:35:48][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'Received: This is testing message 1'
+[21:35:48][MessageBuffer][INFO] Message added to buffer [ Mod: client-6 | Tag:  ] Content: 'This is testing message 1'
+[21:35:48][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'Received: This is testing message 2'
+[21:35:48][MessageBuffer][INFO] Message added to buffer [ Mod: client-6 | Tag:  ] Content: 'This is testing message 2'
+[21:35:48][TelnetClient][WARNING] (client-2) Connection closed
+[21:35:48][TelnetClient][INFO] (client-2) Telnet client [client-2] terminated
+[21:35:48][TelnetClient][WARNING] (client-3) Connection closed
+[21:35:48][TelnetClient][INFO] (client-3) Telnet client [client-3] terminated
+[21:35:48][TelnetClient][WARNING] (client-4) Connection closed
+[21:35:48][TelnetClient][INFO] (client-4) Telnet client [client-4] terminated
+[21:35:48][TelnetClient][WARNING] (client-5) Connection closed
+[21:35:48][TelnetClient][INFO] (client-5) Telnet client [client-5] terminated
+[21:35:48][TelnetClient][INFO] (client-6) Telnet client [client-6] terminated
+[21:35:48][TelnetClient][WARNING] (client-6) Connection closed
+[21:35:48][MessageBuffer][INFO] Message buffer cleared
+[21:35:48][ExternalProgramRunner][INFO] (default) Termiting external application
+[21:35:48][ProcessManager][INFO] PID (29284) removed from file
+[21:35:48][NATTCore][INFO] Test executing finished
+[21:35:48][NATTCore][INFO] Start generating test report
+[21:35:48][ProcessManager][INFO] PID (29284) removed from file
+[21:35:48][ExternalProgramRunner][WARNING] (default) External application ends with error: 1
+[21:35:48][ExternalProgramRunner][WARNING] (default) Error message from external application: Picked up JAVA_TOOL_OPTIONS: -Dstdout.encoding=UTF-8 -Dstderr.encoding=UTF-8
+
+[21:35:48][TestReportGenerator][INFO] Report saved to file
+[21:35:48][NATTCore][INFO] All test cases passed.
+[21:35:48][NATTCore][INFO] Final score: 4,000000
+[21:35:48][NATTCore][INFO] Testing done. Leaving status: PASSED

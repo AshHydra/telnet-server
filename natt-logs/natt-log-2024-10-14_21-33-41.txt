@@ -1,0 +1,8 @@
+[21:33:41][PluginLoader][WARNING] Plugins directory not found.
+[21:33:41][ProcessManager][WARNING] Failed to read PIDs: pid-list.txt (Systém nemůže nalézt uvedený soubor)
+[21:33:41][NATTCore][INFO] NATT CORE initialization done
+Version: 1.7.0 
+Configuration path: https://gitlab.com/ap5vs/test-config/telnet-server-config/-/raw/main/test-config-3.yaml?ref_type=heads
+Configuration loading mode: FROM URL
+[21:33:41][NATTCore][INFO] Working directory path: C:\Users\ash31\OneDrive\Dokumenty\GitHub\telnet-server-main
+[21:33:41][NATTCore][INFO] Start loading of the configuration file ...
